@@ -1,0 +1,64 @@
+{
+  "Actor": {
+    "types": ["character"],
+    "templates": {
+      "base": {
+        "health": {
+          "value": 10,
+          "min": 0,
+          "max": 10
+        },
+        "ac": 10,
+        "initiative": 0,
+        "speed": 30,
+        "proficiency": 0,
+        "rolls": {},
+        "biography": ""
+      }
+    },
+    "character": {
+      "templates": ["base"],
+      "attributes": {
+        "level": {
+          "value": 1
+        }
+      },
+      "abilities": {
+        "str": {
+          "value": 0
+        },
+        "dex": {
+          "value": 0
+        },
+        "con": {
+          "value": 0
+        },
+        "int": {
+          "value": 0
+        },
+        "wis": {
+          "value": 0
+        },
+        "cha": {
+          "value": 0
+        }
+      }
+    }
+  },
+  "Item": {
+    "types": ["action","roll","check"],
+    "templates": ["base"],
+    "action": {
+      "templates": ["action"],
+      "description": ""
+    },
+    "roll": {
+      "templates": ["roll"],
+      "formula": "4d6rr1 + @str.mod + ceil(@lvl / 2)"
+    },
+    "check": {
+      "templates": ["check"],
+      "checkmod": "+ @dex + @proficiency + 1"
+    }
+  }
+}
