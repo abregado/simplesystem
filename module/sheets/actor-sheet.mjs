@@ -11,7 +11,7 @@ export class SimplesystemActorSheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["simplesystem", "sheet", "actor"],
       template: "systems/simplesystem/templates/actor/actor-sheet.html",
-      width: 600,
+      width: 700,
       height: 600,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "features" }]
     });
@@ -186,8 +186,12 @@ export class SimplesystemActorSheet extends ActorSheet {
         if (item){
           if (dataset.rollType.includes('adv')){
             return item.rolladv();
-          } else if (dataset.rollType.includes('dis')){
+          } else if (dataset.rollType.includes('dis')) {
             return item.rolldis();
+          } else if (dataset.rollType.includes('dam')) {
+            return item.rolldamage();
+          } else if (dataset.rollType.includes('crit')) {
+            return item.rollcrit();
           } else {
             return item.roll();
           }

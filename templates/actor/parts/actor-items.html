@@ -21,7 +21,15 @@
         <span class="rollable fas fa-square-plus" data-roll-type="item-adv" data-label="{{item.name}} (adv)"></span>
       </div>
       {{/if}}
-
+      {{#if (itemtype item "attack")}}
+      <div>
+        <span class="rollable fas fa-square-minus" data-roll-type="item-dis" data-label="{{item.name}} (dis)"></span>
+        <span class="rollable fas fa-dice" data-roll-type="item" data-label="{{item.name}}"></span>
+        <span class="rollable fas fa-square-plus" data-roll-type="item-adv" data-label="{{item.name}} (adv)"></span>
+        <span class="rollable fas fa-dumbbell" data-roll-type="item-dam" data-label="{{item.name}} (dam)"></span>
+        <span class="rollable fas fa-percent" data-roll-type="item-crit" data-label="{{item.name}} (crit)"></span>
+      </div>
+      {{/if}}
       <div class="item-controls flexshrink">
         <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
         <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>

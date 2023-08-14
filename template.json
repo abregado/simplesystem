@@ -46,11 +46,17 @@
     }
   },
   "Item": {
-    "types": ["action","roll","check"],
+    "types": ["action","roll","check","attack"],
     "templates": ["base"],
     "action": {
       "templates": ["action"],
       "description": ""
+    },
+    "attack": {
+      "templates": ["attack"],
+      "checkmod": "+ @str + @proficiency",
+      "damageroll": "d6 + @str",
+      "critroll": "2d6 + @str"
     },
     "roll": {
       "templates": ["roll"],

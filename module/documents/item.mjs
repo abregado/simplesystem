@@ -50,6 +50,26 @@ export class SimplesystemItem extends Item {
     }
   }
 
+  async rolldamage() {
+    const item = this;
+    if (this.type === 'attack'){
+      this._rollRoll(item.system.damageroll);
+      return;
+    }
+
+    return roll();
+  }
+
+  async rollcrit() {
+    const item = this;
+    if (this.type === 'attack'){
+      this._rollRoll(item.system.critroll);
+      return;
+    }
+
+    return roll();
+  }
+
   async rolladv() {
     const item = this;
     if (this.type === 'check'){
