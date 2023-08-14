@@ -2,15 +2,20 @@
   "id": "simplesystem",
   "title": "Simplesystem",
   "description": "The Simplesystem system for FoundryVTT!",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "compatibility": {
     "minimum": 10,
-    "verified": "10.287",
-    "maximum": 10
+    "verified": "11.307",
+    "maximum": 11
   },
-  "authors": [{
-    "name": "Asacolips"
-  }],
+  "authors": [
+    {
+      "name": "Asacolips"
+    },
+    {
+      "name": "Abregado"
+    }
+  ],
   "esmodules": ["module/simplesystem.mjs"],
   "styles": ["css/simplesystem.css"],
   "scripts": [],
@@ -26,7 +31,7 @@
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "power",
-  "url": "",
+  "url": "https://github.com/abregado/simplesystem",
   "manifest": "",
   "download": "",
   "license": "LICENSE.txt",
